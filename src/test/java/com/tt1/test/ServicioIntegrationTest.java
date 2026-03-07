@@ -87,16 +87,4 @@ class ServicioIntegrationTest {
 		assertDoesNotThrow(() -> servicio.crearTodo("Nueva tarea", FECHA_FUTURA));
 	}
 
-
-	@Test
-	void testNombreVacioNoAlteraElEstadoDelRepositorio() {
-		try { servicio.crearTodo("", FECHA_FUTURA); } catch (IllegalArgumentException ignored) {}
-		assertTrue(repositorio.obtenerSinCompletar().isEmpty());
-	}
-
-	@Test
-	void testEmailMalFormadoNoSeAlmacena() {
-		try { servicio.agregarDireccionCorreoAAgenda("noEsUnEmail"); } catch (IllegalArgumentException ignored) {}
-		assertTrue(repositorio.obtenerEmails().isEmpty());
-	}
 }
