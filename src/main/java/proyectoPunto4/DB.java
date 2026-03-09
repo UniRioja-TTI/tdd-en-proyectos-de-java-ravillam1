@@ -1,7 +1,9 @@
 package proyectoPunto4;
 
 import java.util.List;
-
+/**
+ * Interfaz que representa a la base de datos
+ */
 public interface DB {
 	public void createTodo(ToDo t);
 	public ToDo readTodo(String id);

@@ -64,7 +64,7 @@ class ServicioTest {
         servicio.crearTodo("A completar", FECHA_FUTURA);
         String id = String.valueOf(repositorio.obtenerSinCompletar().get(0).getId());
         servicio.marcarTareaFinalizada(id);
-        assertEquals(1, servicio.consultarToDosSinCompletar("").size());
+        assertEquals(1, servicio.consultarToDosSinCompletar().size());
     }
 
     @Test

@@ -74,7 +74,7 @@ class ServicioIntegrationTest {
 		String id = String.valueOf(repositorio.obtenerSinCompletar().get(0).getId());
 		servicio.marcarTareaFinalizada(id);
 
-		List<ToDo> resultado = servicio.consultarToDosSinCompletar("");
+		List<ToDo> resultado = servicio.consultarToDosSinCompletar();
 		assertEquals(1, resultado.size());
 	}
 
